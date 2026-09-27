@@ -1,3 +1,7 @@
+# GoreeCloud Music — Planned Features
+
+> **Authority:** Repository-native planned-feature record. The former Drive roadmap is retired after verified migration.
+
 ---
 title: "GoreeCloud Music — Feature Roadmap"
 document_type: "Feature Roadmap"
@@ -7,12 +11,12 @@ classification: "Internal"
 last_updated: "2026-09-15"
 application: "GoreeCloud Music"
 canonical_repository: "GoreeCloud/goreecloud-music"
-repository_control: "FEATURE-ROADMAP.md"
-drive_location: "GoreeCloud/Feature Roadmap/GoreeCloud Music/FEATURE-ROADMAP.md"
+repository_control: "PLANNED-FEATURES.md"
+drive_location: "GoreeCloud/Feature Roadmap/GoreeCloud Music/PLANNED-FEATURES.md"
 authoritative_project_record: "GoreeCloud/Projects/Project Specification — Music.md"
 ---
 
-# GoreeCloud Music — Feature Roadmap
+# GoreeCloud Music — Planned Features
 
 > **Control:** Roadmap presence is not implementation evidence. Repository source/test/release/runtime evidence controls implementation-state claims.
 
@@ -20,13 +24,13 @@ authoritative_project_record: "GoreeCloud/Projects/Project Specification — Mus
 | --- | --- |
 | Authoritative project record | Project Specification — Music.md |
 | Canonical repository | GoreeCloud/goreecloud-music |
-| Repository control | FEATURE-ROADMAP.md |
-| Drive location | GoreeCloud/Feature Roadmap/GoreeCloud Music/FEATURE-ROADMAP.md |
+| Repository control | PLANNED-FEATURES.md |
+| Drive location | GoreeCloud/Feature Roadmap/GoreeCloud Music/PLANNED-FEATURES.md |
 | Internal version | v1.6 |
 
 ## Purpose
 
-This document is the repository-side feature roadmap control for GoreeCloud Music. It records current planned and recommended feature work without replacing the authoritative project record, repository implementation evidence, release gates, or GoreeCloud Tasks Management. It must remain materially synchronized with the corresponding Drive Markdown roadmap.
+This document is the repository-side feature roadmap control for GoreeCloud Music. It records current planned and recommended feature work without replacing the authoritative project record, repository implementation evidence, release gates, or GoreeCloud Tasks Management. It must remain materially 
 
 ## Roadmap
 
@@ -111,7 +115,7 @@ This document is the repository-side feature roadmap control for GoreeCloud Musi
 
 ## Maintenance and synchronization
 
-This roadmap and the corresponding Drive `FEATURE-ROADMAP.md` must remain materially synchronized with one another and with the authoritative project or service record. Update both copies whenever feature scope, priority, dependency, implementation status, cancellation, supersession, recommendation, or verification state materially changes.
+This roadmap and the corresponding Drive `PLANNED-FEATURES.md` must remain materially synchronized with one another and with the authoritative project or service record. Update both copies whenever feature scope, priority, dependency, implementation status, cancellation, supersession, recommendation, or verification state materially changes.
 
 No feature may be represented as complete or Stable solely because it appears in this roadmap. Completion and lifecycle claims require the applicable authoritative implementation, validation, review, release, and production evidence.
 
