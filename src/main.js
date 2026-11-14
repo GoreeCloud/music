@@ -148,5 +148,12 @@ clearButton.addEventListener("click", () => {
 window.addEventListener("pagehide", () => {
   for (const track of tracks) URL.revokeObjectURL(track.url);
 });
+// A back-forward cache restoration could otherwise show stale revoked blob URLs.
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    clearLibrary();
+    announce("Local library cleared after navigation; reselect files to play.");
+  }
+});
 render();
 announce("Files stay in this browser session. No server connection or upload.");

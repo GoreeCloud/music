@@ -34,4 +34,7 @@ test("import plans are duplicate-safe and enforce library cap", () => {
   assert.equal(result.rejected, 2);
   assert.equal(planImport([a], new Set([fileKey(a)])).rejected, 1);
   assert.equal(planImport([a, b], new Set(), MAX_TRACKS - 1).accepted.length, 1);
+  const irregular = planImport([null, {}, a]);
+  assert.equal(irregular.accepted.length, 1);
+  assert.equal(irregular.rejected, 2);
 });

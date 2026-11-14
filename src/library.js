@@ -33,8 +33,11 @@ export function planImport(files, existingKeys = new Set(), currentCount = 0) {
   const seen = new Set(existingKeys);
   let rejected = 0;
   for (const file of files) {
+    // Validate before computing identity: even an unexpected null/hostile
+    // entry must not crash a bulk import or interrupt later valid files.
+    if (!isAudioFile(file)) { rejected++; continue; }
     const key = fileKey(file);
-    if (!isAudioFile(file) || seen.has(key) || currentCount + accepted.length >= MAX_TRACKS) {
+    if (seen.has(key) || currentCount + accepted.length >= MAX_TRACKS) {
       rejected++;
       continue;
     }
