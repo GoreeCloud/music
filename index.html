@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" data-gc-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; media-src blob:; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="dark">
+  <title>GoreeCloud Music — Local Preview</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./src/main.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="mark" aria-hidden="true">♫</div>
+      <div><p class="eyebrow">GoreeCloud / Local preview</p><h1>Music</h1></div>
+      <span class="privacy">Private session · No uploads</span>
+    </header>
+    <div class="layout">
+      <aside class="library" aria-labelledby="library-heading">
+        <div class="section-heading"><div><p class="eyebrow">Your listening space</p><h2 id="library-heading">Library</h2></div><span id="count">0 tracks</span></div>
+        <input type="file" id="audio-files" accept="audio/*,.mp3,.m4a,.aac,.wav,.flac,.ogg,.oga,.opus,.webm,.mp4" multiple>
+        <label class="picker" for="audio-files">Add audio files <span aria-hidden="true">＋</span></label>
+        <label class="search-label" for="search">Filter library</label>
+        <input id="search" type="search" placeholder="Search this session" autocomplete="off">
+        <p id="empty" class="empty">Choose audio files to begin.</p>
+        <ol id="track-list" aria-label="Tracks"></ol>
+        <button type="button" id="clear" class="subtle" disabled>Clear session</button>
+      </aside>
+      <main class="main" aria-labelledby="now-playing-heading">
+        <div class="hero">
+          <span class="eyebrow">Personal listening · Device-only</span>
+          <h2 id="now-playing-heading">Now playing</h2>
+          <div class="record" aria-hidden="true"><span>♫</span></div>
+          <p id="now-playing" class="song">Nothing playing</p>
+          <p class="hint">Audio is opened from your device and is never sent to GoreeCloud.</p>
+        </div>
+        <section class="player" aria-label="Playback controls">
+          <div class="time"><span id="elapsed">0:00</span><span id="duration">0:00</span></div>
+          <label for="seek" class="sr-only">Seek within the current track</label>
+          <input type="range" id="seek" min="0" max="100" step="1" value="0" disabled>
+          <div class="controls">
+            <button id="previous" type="button" disabled aria-label="Previous track">⏮</button>
+            <button id="play" class="primary" type="button" disabled aria-label="Play current track">Play</button>
+            <button id="next" type="button" disabled aria-label="Next track">⏭</button>
+          </div>
+          <audio id="audio-player" preload="metadata"></audio>
+          <p id="status" class="status" role="status" aria-live="polite"></p>
+        </section>
+      </main>
+    </div>
+    <footer>GoreeCloud UI semantic colors · Development preview · No library sync or account access</footer>
+  </div>
+</body>
+</html>

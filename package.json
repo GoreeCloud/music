@@ -1,0 +1,13 @@
+{
+  "name": "@goreecloud/music",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "GoreeCloud Music local-only, browser-based development preview",
+  "scripts": {
+    "check": "node --check src/library.js && node --check src/main.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "engines": { "node": ">=22" },
+  "license": "MIT"
+}
