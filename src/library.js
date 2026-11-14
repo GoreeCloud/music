@@ -17,7 +17,7 @@ export function fileKey(file) {
 }
 
 export function displayName(name) {
-  const stripped = String(name ?? "").replace(/\.[^.]+$/, "").replace(/[\u0000-\u001f\u007f]/g, " ").trim();
+  const stripped = String(name ?? "").replace(/\.[^.]+$/, "").replace(/[\u0000-\u001f\u007f-\u009f\u202a-\u202e\u2066-\u2069]/g, " ").trim();
   const characters = Array.from(stripped || "Untitled track");
   return characters.length > 120 ? characters.slice(0, 119).join("") + "…" : characters.join("");
 }

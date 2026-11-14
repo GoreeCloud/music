@@ -19,6 +19,9 @@ test("file signatures use independent name/size/modification fields", () => {
 test("filenames remain plain display data, never markup", () => {
   assert.equal(displayName("<img src=x onerror=alert(1)>.mp3"), "<img src=x onerror=alert(1)>");
   assert.equal(displayName("hello\u0000world.wav"), "hello world");
+  assert.equal(displayName("safe\u202E3pm.evil.mp3"), "safe 3pm.evil");
+  assert.equal(displayName("hello\u2066world.ogg"), "hello world");
+  assert.equal(displayName("name\u0085track.mp3"), "name track");
   assert.equal(displayName("x".repeat(140) + ".mp3").length, 120);
 });
 test("format time degrades safely on invalid duration", () => {
